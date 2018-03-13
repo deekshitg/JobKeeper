@@ -1,0 +1,17 @@
+<ul class="navbar-nav">
+  <li class="nav-item">
+      <a class="nav-link" ng-show="currentUser" ng-href="#/home">Home</a>
+  </li>
+  <li class="nav-item">
+      <a class="nav-link" ng-show="currentUser" ng-href="#/addInterview">Add Interview</a>
+  </li>
+  <li class="nav-item">
+      <a class="nav-link" ng-show="currentUser" ng-href="#/company">Add Company</a>
+  </li>
+  <li class="nav-item">
+      <a class="nav-link" ng-show="currentUser" ng-href="#/viewcompany">View Company</a>
+  </li>
+  <li class="nav-item">
+      <a class="nav-link" ng-show="currentUser" ng-href="#/login" ng-click="logout()" ng-controller="RegisterController">LogOut</a>
+  </li>
+</ul>

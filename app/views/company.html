@@ -1,0 +1,36 @@
+<div class="card w-50 mx-auto">
+  <div class="card-body">
+    <h3><strong>Add a company!!</strong></h3>
+    <p ng-show="message">{{message}}</p>
+    <form name="myForm" ng-submit="addCompany()"
+    novalidate>
+      <div class="form-group">
+        <label for="name">Company name:</label>
+        <input type="text" name="name" class="form-control" placeholder="Company Name"
+        ng-model="comapny.name" ng-required="true">
+        <p class="error" ng-show="myForm.name.$invalid && myForm.name.$touched && !message">Please enter Company Name</p>
+      </div>
+      <div class="form-group">
+        <label for="role">Role:</label>
+        <input type="text" name="role" class="form-control" placeholder="Role"
+        ng-model="comapny.role" ng-required="true">
+        <p class="error" ng-show="myForm.role.$invalid && myForm.role.$touched && !message">Please enter Role</p>
+      </div>
+      <div class="form-group">
+        <label for="status">Status:</label>
+        <input type="text" name="status" class="form-control" placeholder="Status"
+        ng-model="comapny.status" ng-required="true">
+        <p class="error" ng-show="myForm.status.$invalid && myForm.status.$touched && !message">Please enter Status</p>
+      </div>
+      <div class="form-group">
+        <label for="date">Date Applied:</label>
+        <input type="date" name="date" class="form-control" placeholder="Date Applied"
+        ng-model="comapny.date" ng-required="true">
+        <p class="error" ng-show="myForm.date.$invalid && myForm.date.$touched && !message">Please enter Date</p>
+      </div>
+      <div class="form-group">
+        <button type="submit" name="submit" class="form-control btn btn-primary">Submit</button>
+      </div>
+    </form>
+  </div>
+</div>

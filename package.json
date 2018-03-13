@@ -1,0 +1,16 @@
+{
+  "name": "bootstrap",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "angular": "^1.6.8",
+    "browser-sync": "^2.23.2",
+    "gulp": "^3.9.1"
+  }
+}

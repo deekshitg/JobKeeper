@@ -1,0 +1,29 @@
+<div class="card w-50 mx-auto">
+  <div class="card-body mx-auto">
+    <h3>Add Interview</h3>
+    <form name="myForm" class="form-inline" ng-submit="addInterview()"
+      novalidate>
+    <input type="text" name="interviewname" class="form-control" placeholder="Name"
+      ng-model="interviewname" ng-required="true">
+    <input type="date" name="interviewdate" class="form-control" placeholder="Interview Date"
+      ng-model="interviewdate" ng-required="true">
+      &nbsp;<button type="submit" class="btn btn-success">+</button>
+    <p class="error" ng-show="(myForm.interviewname.$invalid && myForm.interviewname.$touched && !message) || (myForm.interviewdate.$invalid && myForm.interviewdate.$touched && !message)">Please Fill All the fields</p>
+    </form>
+    <p ng-show="message">{{message}}</p>
+  </div>
+</div>
+<div class="card w-50 mx-auto">
+  <div class="card-body">
+    <h3>Interviews</h3>
+    <div class="table-responsive">
+      <table class="table" ng-controller="InterviewController">
+        <tr ng-repeat="(key,interview) in interviews | orderBy: order:dir | filter: query">
+          <td>{{interview.name}}</td>
+          <td>{{interview.date}}</td>
+          <td><button class="btn btn-danger btn-sm" ng-click="deleteInterview(key)" > &times; </button></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

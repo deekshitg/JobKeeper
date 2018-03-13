@@ -1,0 +1,26 @@
+<div class="row">
+  <div class="col-lg-6">
+    <h3>Interviews</h3>
+    <div class="table-responsive">
+      <table class="table" ng-controller="InterviewController">
+        <tr ng-repeat="(key,interview) in interviews | orderBy: order:dir | filter: query">
+          <td>{{interview.name}}</td>
+          <td>{{interview.date}}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <div class="col-lg-6">
+    <div class="table-responsive">
+      <table class="table" ng-controller="CompanyController">
+        <tr class="thead-dark"><th>Company</th><th>Role</th><th>Status</th><th>Applied On</th></tr>
+        <tr ng-repeat="(key,company) in companies | orderBy: order:dir | filter: query">
+          <td>{{company.name}}</td>
+          <td>{{company.role}}</td>
+          <td>{{company.status}}</td>
+          <td>{{company.date}}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

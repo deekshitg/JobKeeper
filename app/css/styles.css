@@ -1,0 +1,13 @@
+.form_center{
+  width: 50%;
+  margin: 0 auto;
+}
+.error{
+  color: red;
+}
+.recycle{
+  text-align: center;
+}
+.card{
+  margin:15px;
+}
